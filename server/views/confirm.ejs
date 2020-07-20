@@ -1,0 +1,46 @@
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Confirm</title>
+        <style type="text/css">
+        	* {
+				    font: 600 16px system-ui, sans-serif;
+			    }
+          textarea {
+            height: 70px;
+          }
+          label {
+            white-space: pre-wrap;
+          }
+          td {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+          }
+        </style>
+    </head>
+    <body>
+      <p>
+        <img src="/public/ocr.png" width="480"></img>
+      </p>
+      <!-- <p>
+        OCR: 
+        <br>
+        <%= ocr %>
+      </p> -->
+      <br>
+      <p>
+        Important value:
+        <form action="/result" method="POST" enctype="multipart/form-data">
+          <table>
+            <tr>
+              <td><%= item %></td>
+              <td><textarea id="team_name" rows = "7" cols = "20" name = "name_field"><%= value %></textarea></td>
+            </tr>
+          </table>
+          <input type="submit" value="OK">
+        </form>
+      </p>
+    </body>
+</html>
